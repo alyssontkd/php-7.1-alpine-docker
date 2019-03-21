@@ -10,9 +10,9 @@ RUN apt-get update && \
     apt-get dist-upgrade -y && \
     apt-get install -y \
     apache2 \
-    php7.1 \
-    php7.1-cli \
-    libapache2-mod-php7.1 \
+    php7.0 \
+    php7.0-cli \
+    libapache2-mod-php7.0 \
     composer
 
 ADD 000-default.conf /etc/apache2/sites-available/000-default.conf
