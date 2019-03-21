@@ -31,5 +31,5 @@ RUN chmod -R 777 /var/www/html
 
 #EXPOSE 80
 
-RUN cp -av index.php ./app
+RUN cp -av index.php /var/www/html
 CMD ["apachectl", "-D", "FOREGROUND"]
