@@ -9,4 +9,4 @@ services:
       #- ./app/uploads:/var/www/html/uploads
     ports:
       #- "80:80" #descomente esta linha se não tem proxy reverso
-      - "8011:80" # mapeamento de porta para o proxy reverso.
+      - "8004:80" # mapeamento de porta para o proxy reverso.
