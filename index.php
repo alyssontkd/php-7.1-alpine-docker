@@ -1,2 +1,2 @@
 <?php
-include "feature.html";
+include "features.html";
