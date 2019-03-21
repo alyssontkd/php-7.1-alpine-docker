@@ -16,13 +16,9 @@ RUN apt-get update && \
     composer
 
 ADD 000-default.conf /etc/apache2/sites-available/000-default.conf
-
-WORKDIR /var/www/html
-
 ADD index.php /var/www/html
 
-#Comando para alterar o Dono de algum diretorio
-#RUN chown -R www-data:www-data /var/www/html && chmod -R 777 /var/www/html
+WORKDIR /var/www/html
 
 #Comando para dar permissao a algum diretorio
 RUN chmod -R 777 /var/www/html
