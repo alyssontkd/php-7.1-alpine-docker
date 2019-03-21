@@ -19,7 +19,7 @@ ADD 000-default.conf /etc/apache2/sites-available/000-default.conf
 
 WORKDIR /var/www/html
 
-ADD ./ .
+ADD index.php /var/www/html
 
 #Comando para alterar o Dono de algum diretorio
 #RUN chown -R www-data:www-data /var/www/html && chmod -R 777 /var/www/html
@@ -27,9 +27,4 @@ ADD ./ .
 #Comando para dar permissao a algum diretorio
 RUN chmod -R 777 /var/www/html
 
-#RUN a2enmod rewrite
-
-#EXPOSE 80
-
-RUN cp -av index.php /var/www/html
 CMD ["apachectl", "-D", "FOREGROUND"]
